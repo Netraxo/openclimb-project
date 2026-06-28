@@ -155,7 +155,7 @@ Technical crux.
 
 Button
 
-Open in Topo
+🗺 View in Topo
 
 Returns directly to the selected route in the sector topo.
 
