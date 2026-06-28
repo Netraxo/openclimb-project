@@ -10,13 +10,13 @@ This is the most frequently used screen while climbing.
 
 ## User Goal
 
-Choose a route with minimal scrolling.
+Choose a climbing route in the shortest possible time.
 
 ---
 
 ## Success
 
-The user finds a suitable route within seconds.
+The user finds and selects a route within seconds without leaving the topo.
 
 ---
 
@@ -30,9 +30,10 @@ Hero Image
 
 - Sector photo
 
-Topo
+Interactive Topo
 
-- Interactive topo
+- Full sector topo
+- Routes are selectable
 
 Sector Information
 
@@ -44,18 +45,17 @@ Sector Information
 
 Route List
 
-Every route displays:
+Each route displays:
 
 - Route name
 - Official grade
+- Community rating (★★★★★)
 - Climbing type
-- Route height
 - Number of quickdraws
 - Protection character
 - Route character
-- User rating
 
-Selecting a route opens the Route Screen.
+Selecting a route opens the Route Preview Card.
 
 ---
 
@@ -73,13 +73,65 @@ Selecting a route opens the Route Screen.
 
 🧭 East / North
 
-🥾 5 min
+🥾 Approach: 5 min
 
-────────────
+────────────────────────
 
-🏆 Jack Sparrow    VI.2
+🏆 Jack Sparrow      VI.2
+
+★★★★★
+
+Sport
+
+5 quickdraws
+
+🙂 Cautious
+
+Vertical • Arete • Roof
+
+────────────────────────
+
+Blackjack          VI.4
 
 ★★★★☆
+
+Sport
+
+6 quickdraws
+
+😬 Demanding
+
+Overhang
+
+---
+
+# Interactive Topo
+
+The topo and the route list are synchronized.
+
+Selecting a route on the topo automatically highlights the corresponding route in the list.
+
+Selecting a route in the list automatically highlights the route on the topo.
+
+Only one route can be selected at a time.
+
+The selected route remains highlighted until another route is selected.
+
+---
+
+# Route Preview Card
+
+Selecting a route does NOT immediately open the Route Screen.
+
+Instead, a bottom sheet appears.
+
+Example:
+
+🏆 Jack Sparrow
+
+VI.2
+
+★★★★★
 
 Sport
 
@@ -91,27 +143,62 @@ Sport
 
 Vertical • Arete • Roof
 
-────────────
+[ Open Route ]
 
-Blackjack      VI.4
+The user can:
 
-★★★☆☆
+- close the card
+- select another route
+- open the full Route Screen
 
-Sport
+The topo always remains visible behind the card.
 
-10 m
+---
 
-6 quickdraws
+# Route Screen
 
-😬 Demanding
+The full Route Screen opens only after selecting:
 
-Overhang
+Open Route
+
+---
+
+# User Flow
+
+Map
+
+↓
+
+Crag
+
+↓
+
+Sector
+
+↓
+
+Select Route
+
+↓
+
+Route Preview Card
+
+↓
+
+Open Route
+
+↓
+
+Route Screen
 
 ---
 
 # Design Principles
 
-- Topo first.
+- Topo is always the primary element.
+- The map and topo should never disappear unnecessarily.
 - Minimal scrolling.
-- Route comparison at a glance.
-- Clean layout.
+- Route comparison should be possible without opening multiple screens.
+- One tap highlights a route.
+- Two taps open the complete route page.
+- Keep the interface clean and distraction-free.
