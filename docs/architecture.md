@@ -1,4 +1,4 @@
-# OpenClimb Architecture
+# OpenClimb Architecture 
 
 ## Purpose
 
