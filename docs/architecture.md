@@ -1,57 +1,157 @@
 # OpenClimb Architecture
 
-## Mobile
+## Overview
 
-React Native
+OpenClimb is a mobile-first application designed for climbers.
 
-TypeScript
-
-Expo
+The application focuses on simplicity, offline usability and fast access to climbing information.
 
 ---
 
-## Backend
+# Mobile
 
-Supabase
+Framework:
+- React Native
+- Expo
+
+Language:
+- TypeScript
 
 ---
 
-## Database
+# Backend
+
+- Supabase
+
+Services:
+- Authentication
+- PostgreSQL Database
+- Storage
+- Realtime
+
+---
+
+# Database
 
 PostgreSQL
 
+Main entities:
+
+- Crags
+- Sectors
+- Routes
+- Users
+- Route Ratings
+- Community Grades
+- Comments
+- Approach Tracks
+
 ---
 
-## Maps
+# Maps
 
 MapLibre
 
+Reasons:
+
+- Open Source
+- Offline support
+- Fast rendering
+- Vector tiles
+
 ---
 
-## Storage
+# Topo
+
+SVG overlays
+
+Reasons:
+
+- Infinite scaling
+- Route highlighting
+- Interactive routes
+- Color-coded difficulty
+
+---
+
+# Offline
+
+SQLite
+
+Cached:
+
+- Maps
+- Crags
+- Sectors
+- Routes
+- Topos
+- Photos
+- Approach Tracks
+
+---
+
+# Images
+
+Format:
+
+WebP
+
+Storage:
 
 Supabase Storage
 
 ---
 
-## Authentication
+# Authentication
 
 Supabase Auth
 
----
+Supported:
 
-## Offline
-
-Local SQLite
-
----
-
-## Images
-
-WebP
+- Email
+- Google
+- Apple
 
 ---
 
-## Topo
+# Project Structure
 
-SVG Overlay
+app/
+
+assets/
+
+components/
+
+features/
+
+    map/
+
+    crags/
+
+    sectors/
+
+    routes/
+
+    search/
+
+    profile/
+
+    approach/
+
+services/
+
+hooks/
+
+types/
+
+utils/
+
+docs/
+
+---
+
+# Design Principles
+
+The architecture follows the principles defined in:
+
+docs/design-principles.md
