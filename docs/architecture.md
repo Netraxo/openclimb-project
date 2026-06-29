@@ -1,41 +1,71 @@
 # OpenClimb Architecture
 
-## Overview
+## Purpose
 
-OpenClimb is a mobile-first application designed for climbers.
+This document describes the technical architecture of OpenClimb.
 
-The application focuses on simplicity, offline usability and fast access to climbing information.
+The goal is to keep the application simple, scalable and easy to maintain.
 
 ---
 
 # Mobile
 
-Framework:
+Framework
+
 - React Native
 - Expo
 
-Language:
+Language
+
 - TypeScript
+
+Reason
+
+One codebase for Android and iOS with excellent community support.
 
 ---
 
 # Backend
 
+Platform
+
 - Supabase
 
-Services:
-- Authentication
+Services
+
 - PostgreSQL Database
+- Authentication
 - Storage
-- Realtime
+- Realtime API
+
+Reason
+
+Simple architecture with minimal backend maintenance.
+
+---
+
+# Maps
+
+Engine
+
+- MapLibre
+
+Reason
+
+- Open Source
+- Offline support
+- High performance
+- Vector maps
 
 ---
 
 # Database
 
-PostgreSQL
+Engine
 
-Main entities:
+- PostgreSQL
+
+Main Entities
 
 - Crags
 - Sectors
@@ -48,57 +78,48 @@ Main entities:
 
 ---
 
-# Maps
-
-MapLibre
-
-Reasons:
-
-- Open Source
-- Offline support
-- Fast rendering
-- Vector tiles
-
----
-
 # Topo
 
-SVG overlays
+Format
 
-Reasons:
+SVG
+
+Reason
 
 - Infinite scaling
-- Route highlighting
 - Interactive routes
-- Color-coded difficulty
-
----
-
-# Offline
-
-SQLite
-
-Cached:
-
-- Maps
-- Crags
-- Sectors
-- Routes
-- Topos
-- Photos
-- Approach Tracks
+- Route highlighting
+- Difficulty colors
 
 ---
 
 # Images
 
-Format:
+Storage
+
+Supabase Storage
+
+Format
 
 WebP
 
-Storage:
+---
 
-Supabase Storage
+# Offline
+
+Local database
+
+SQLite
+
+Cached data
+
+- Maps
+- Crags
+- Sectors
+- Routes
+- Photos
+- Topos
+- Approach Tracks
 
 ---
 
@@ -106,7 +127,7 @@ Supabase Storage
 
 Supabase Auth
 
-Supported:
+Providers
 
 - Email
 - Google
@@ -150,8 +171,8 @@ docs/
 
 ---
 
-# Design Principles
+# Principles
 
-The architecture follows the principles defined in:
+The architecture follows the rules defined in:
 
 docs/design-principles.md
